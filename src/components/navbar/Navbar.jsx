@@ -1,0 +1,17 @@
+import { memo } from "react";
+import NavMenu from "./NavMenu";
+import Logo from "./Logo";
+
+const Navbar = memo(function Navbar({ isScrolled }) {
+  return (
+    <div
+      className={`fixed top-0 left-0 w-full flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-12 py-3 md:py-4 backdrop-blur-lg transition-all duration-300
+      ${isScrolled ? "bg-white/80 shadow-md" : "bg-transparent"}`}
+    >
+    <NavMenu />
+    <Logo />
+    </div>
+  );
+});
+
+export default Navbar;

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Univers LT Std";
+  src: url("/fonts/UniversLTStd.woff2") format("woff2");
+ 
+}
+
+@font-face {
+  font-family: "TT Chocolates";
+  src: url("/fonts/TTChocolates-Regular.woff2") format("woff2");
+
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
