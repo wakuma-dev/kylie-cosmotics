@@ -1,0 +1,1 @@
+import{n as e,t}from"./index-D8bDglka.js";e();var n=t(),r=()=>(0,n.jsx)(`div`,{children:`Checkout`});export{r as default};

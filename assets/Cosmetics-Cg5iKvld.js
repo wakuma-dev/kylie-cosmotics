@@ -1,1 +1,0 @@
-import{n as e,t}from"./index-C4SfwmdJ.js";e();var n=t(),r=()=>(0,n.jsx)(`div`,{children:`Cosmetics`});export{r as default};
