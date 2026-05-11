@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { NavLink } from "react-router-dom";
-import navItems from "../../data/NavItems";
+import navItems from "../../data/navItems"
 
 const NavMenu = memo(function NavMenu() {
   return (
