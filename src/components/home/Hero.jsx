@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import img from '../../assets/704fb0232a24750851ab2d1c11a65349.jpg'
+import img from "../../assets/704fb0232a24750851ab2d1c11a65349.jpg";
 import { Button } from "../../components/ui/Button";
 import { useNavigate } from "react-router-dom";
 export default function Hero() {
@@ -47,8 +47,9 @@ export default function Hero() {
       <p className="text-[17px] leading-[20px] text-white md:text-[20px] md:leading-[23px] font-light font-sans">
         meet our new juicy, kiss-proof
         <br />
-        <span className="font-medium">coconut water lips stain</span> 
-        and  <br />nourshing, moisture-rich <span className="font-medium">cloud balm</span>
+        <span className="font-medium">coconut water lips stain</span>
+        and <br />
+        nourshing, moisture-rich <span className="font-medium">cloud balm</span>
       </p>
       <Button variant="secondary" onClick={() => navigate("/shop")}>
         Shop Now
