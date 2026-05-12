@@ -1,0 +1,1 @@
+import{n as e,t}from"./index-CJjhgn8c.js";e();var n=t(),r=()=>(0,n.jsx)(`div`,{children:`Fragrance`});export{r as default};
