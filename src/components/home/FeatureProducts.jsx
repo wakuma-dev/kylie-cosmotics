@@ -9,7 +9,7 @@ const FeatureProducts = () => {
   const navigate = useNavigate();
 
   const motionProps = {
-    initial: { opacity: 0, y: 80 },
+    initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, amount: 0.2 }, 
     transition: { duration: 0.7, ease: "easeOut" },
@@ -22,7 +22,7 @@ const FeatureProducts = () => {
           {...motionProps}
           className="rounded-xl overflow-hidden shadow-md"
         >
-          <img src={img} alt="product" className="w-full h-90 object-cover" />
+          <img src={img} alt="product" className="w-full h-[500px] object-cover" />
         </motion.div>
 
         {/* CENTER CONTENT */}
@@ -56,7 +56,7 @@ const FeatureProducts = () => {
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
           className="rounded-md overflow-hidden shadow-md"
         >
-          <img src={img2} alt="product" className="w-full h-80 object-cover" />
+          <img src={img2} alt="product" className="w-full h-[500px] object-cover" />
         </motion.div>
       </div>
     </section>
