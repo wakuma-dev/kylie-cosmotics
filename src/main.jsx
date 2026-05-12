@@ -9,7 +9,7 @@ import AuthProvider from './context/AuthProvider.jsx'
 import SearchProvider from './context/SearchProvider.jsx'
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/kylie-cosmotics/">
       <AuthProvider>
         <RouteProvider>
           <CartProvider>
