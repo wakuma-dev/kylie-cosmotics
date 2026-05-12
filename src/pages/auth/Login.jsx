@@ -22,7 +22,7 @@ export default function Login() {
 
       <form
         onSubmit={handleLogin}
-        className="w-full lg:w-[400px] flex flex-col gap-3"
+        className="w-full max-w-[400px] flex flex-col gap-3"
       >
         <input
           type="email"

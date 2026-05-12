@@ -6,13 +6,16 @@ import RouteProvider from './context/RouteProvider.jsx'
 import CartProvider from './context/CartProvider.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import AuthProvider from './context/AuthProvider.jsx'
+import SearchProvider from './context/SearchProvider.jsx'
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename="/">
+    <BrowserRouter>
       <AuthProvider>
         <RouteProvider>
           <CartProvider>
-            <App />
+            <SearchProvider>
+              <App />
+            </SearchProvider>
           </CartProvider>
         </RouteProvider>
       </AuthProvider>

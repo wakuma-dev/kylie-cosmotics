@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
+import Footer from "../components/footer/Footer";
 export default function MainLayout() {
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -28,6 +29,8 @@ export default function MainLayout() {
       <main className="pt-20">
         <Outlet />
       </main>
+      <Footer />
     </>
   );
 }
+  

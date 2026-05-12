@@ -11,6 +11,11 @@ const Fragrance = lazy(() => import("../pages/fragrance/Fragrance.jsx"));
 const Cosmetics = lazy(() => import("../pages/cosmetics/Cosmetics.jsx"));
 const Skin = lazy(() => import("../pages/skin/Skin.jsx"));
 const Checkout = lazy(() => import("../pages/Checkout.jsx"))
+const Contact = lazy(() => import("../pages/Contact.jsx"));
+const Reward = lazy(() => import("../pages/Reward.jsx"));
+const Card = lazy(() => import("../pages/Card.jsx"));
+const Order = lazy(() => import("../pages/Order.jsx"));
+
 export default function AppRoutes() {
   return (
     <Suspense
@@ -28,6 +33,10 @@ export default function AppRoutes() {
           <Route path="skin" element={<Skin />} />
           <Route path="discover" element={<Discover />} />
           <Route path="checkout" element={<Checkout />} />
+          <Route path="order" element={<Order />} />
+          <Route path="reward" element={<Reward />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="card" element={<Card />} />
         </Route>
         <Route path="/auth" element={<AuthLayout />}>
             <Route path="login" element={<Login />} />

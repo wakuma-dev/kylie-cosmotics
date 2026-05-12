@@ -4,7 +4,7 @@ import Auth from '../Auth'
 
 const Cta = () => {
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4 z-50">
         <Auth />
         <Cart />
         
