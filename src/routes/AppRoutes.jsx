@@ -16,7 +16,7 @@ const Reward = lazy(() => import("../pages/Reward.jsx"));
 const Card = lazy(() => import("../pages/Card.jsx"));
 const Order = lazy(() => import("../pages/Order.jsx"));
 const Shop = lazy(() => import("../pages/Shop.jsx"));
-const Discover = lazy(() => import("../pages/Discover.jsx"));
+
 export default function AppRoutes() {
   return (
     <Suspense
@@ -39,7 +39,7 @@ export default function AppRoutes() {
           <Route path="contact" element={<Contact />} />
           <Route path="card" element={<Card />} />
           <Route path="shop" element={<Shop />} />
-          <Route path="discover" element={<Discover />} />
+        
           
         </Route>
         <Route path="/auth" element={<AuthLayout />}>
