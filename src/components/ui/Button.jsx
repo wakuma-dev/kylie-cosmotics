@@ -13,7 +13,7 @@ export function Button({
 
   return (
     <button
-      className={`px-4 py-1.5 transition-all duration-150 rounded-md border ${style[variant]} ${className}`}
+      className={`px-2 lg:px-4 py-1 lg:py-1.5 transition-all duration-150 rounded-md border ${style[variant]} ${className}`}
       {...props}
     >
       {children}

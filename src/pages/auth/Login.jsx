@@ -22,20 +22,20 @@ export default function Login() {
 
       <form
         onSubmit={handleLogin}
-        className="w-full max-w-[400px] flex flex-col gap-3"
+        className="w-full max-w-[300px] md:max-w-[450px] flex flex-col gap-3"
       >
         <input
           type="email"
           placeholder="email"
           onChange={(e) => setEmail(e.target.value)}
-          className="px-6 py-1.5 bg-white rounded-md placeholder:text-xs w-full"
+          className="outline-none px-6 py-1.5 bg-white rounded-md placeholder:text-xs w-full"
         />
 
         <input
           type="password"
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
-          className="px-6 py-1.5 bg-white rounded-md placeholder:text-xs w-full"
+          className="outline-none px-6 py-1.5 bg-white rounded-md placeholder:text-xs w-full"
         />
 
         <Button type="submit" variant="primary" className="w-full">

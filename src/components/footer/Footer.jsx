@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="w-full flex justify-center max-w-9xl h-full lg:min-h-[70vh] px-4 sm:px-6 md:px-10 lg:px-12 py-3 lg:py-5 bg-[#f8f1f4]">
       <div className="mt-10 flex flex-col items-start gap-2 w-full max-w-[800px] mx-auto">
-        <h4 className="text-left text-[20px] leading-[22px] font-semibold text-[#393939] font-sans tracking-normal">
+        <h4 className="text-left text-[17px] md:text-[20px] leading-[20px] md:leading-[22px] font-semibold text-[#393939] font-sans tracking-normal">
           sign up for updates:
         </h4>
         <span className="font-sans text-[16px] font-normal text-[#393939] leading-[18px]">
@@ -22,17 +22,17 @@ export default function Footer() {
 
           <Button variant="secondary">submit</Button>
         </div>
-        <div className="flex items-center justify-center gap-4 mx-auto mt-8 lg:mt-16">
+        <div className="flex items-center justify-center gap-4 mx-auto py-4 sm:py-6 md:py-8">
           {socialLinks.map((item, index) => {
             const Icon = item.icon;
             return (
               <a key={index} href={item.path} target="_blank">
-                <Icon className="text-[24px] leading-[21px] font-medium text-[#b3848f]" />
+                <Icon className="text-[18px] md:text-[20px]lg:text-[24px] leading-[21px] font-medium text-[#b3848f]" />
               </a>
             );
           })}
         </div>
-        <div className="flex items-center justify-center gap-4 mt-10 mx-auto">
+        <div className="flex items-center justify-center gap-4  mx-auto">
           {FooterLinks.map((item) => {
             return (
               <NavLink
@@ -44,8 +44,8 @@ export default function Footer() {
             );
           })}
         </div>
-        <div className="flex items-center justify-end text-center pt-14 mx-auto">
-          <p className="text-[12px] leading-[14px] text-[#393939] font-normal">
+        <div className="flex items-center justify-end text-center  mx-auto">
+          <p className="text-[12px] leading-[14px] text-[#393939] font-normal py-3 md:py-5">
             Developed by: <span className="text-[#b3848f] font-medium">Wakuma hailu</span>
           </p>
         </div>

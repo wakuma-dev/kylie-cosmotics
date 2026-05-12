@@ -28,27 +28,27 @@ export default function Signup() {
 
       <form
         onSubmit={handleSignup}
-        className="w-full lg:w-[400px] flex flex-col gap-3"
+        className="w-full max-w-[300px] md:max-w-[450px] flex flex-col gap-3"
       >
         <input
           type="text"
           placeholder="name"
           onChange={(e) => setName(e.target.value)}
-          className="px-6 py-1.5 bg-white rounded-md placeholder:text-xs w-full"
+          className="outline-none px-6 py-1.5 bg-white rounded-md placeholder:text-xs w-full"
         />
 
         <input
           type="email"
           placeholder="email"
           onChange={(e) => setEmail(e.target.value)}
-          className="px-6 py-1.5 bg-white rounded-md placeholder:text-xs w-full"
+          className="outline-none px-6 py-1.5 bg-white rounded-md placeholder:text-xs w-full"
         />
 
         <input
           type="password"
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
-          className="px-6 py-1.5 bg-white rounded-md placeholder:text-xs w-full"
+          className="outline-none px-6 py-1.5 bg-white rounded-md placeholder:text-xs w-full"
         />
 
         <Button type="submit" variant="primary" className="w-full">
