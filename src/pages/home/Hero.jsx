@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import img from '../../assets/704fb0232a24750851ab2d1c11a65349.jpg'
 import { Button } from "../../components/ui/Button";
-import useRouter from "../../hooks/useRouter";
+import { useNavigate } from "react-router-dom";
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
- const { navigate } = useRouter();
+  const navigate = useNavigate();
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
