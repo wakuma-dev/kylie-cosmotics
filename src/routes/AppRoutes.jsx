@@ -35,7 +35,12 @@ const Moistures = lazy(() => import("../pages/skin/face/Moistures.jsx"));
 const Toners = lazy(() => import("../pages/skin/face/Toners.jsx"));
 const Serums = lazy(() => import("../pages/skin/face/Serums.jsx"));
 const Sellers = lazy(() => import("../pages/skin/Sellers.jsx"));
-const Sets = lazy(() => import("../pages/skin/Sets.jsx"))
+const Sets = lazy(() => import("../pages/skin/Sets.jsx"));
+const About = lazy(() => import("../pages/discover/About.jsx"));
+const GiftGuide = lazy(() => import("../pages/discover/GiftGuide.jsx"));
+const GuideCard = lazy(() => import("../pages/discover/GuideCard.jsx"));
+const Shade = lazy(() => import("../pages/discover/Shade.jsx"));
+const Looks = lazy(() => import("../pages/discover/Looks.jsx"));
 export default function AppRoutes() {
   return (
     <Suspense
@@ -78,6 +83,11 @@ export default function AppRoutes() {
           <Route path="moistures" element={<Moistures />} />
           <Route path="best-sellers" element={<Sellers />} />
           <Route path="bundles-sets" element={<Sets />} />
+          <Route path="about-us" element={<About />} />
+          <Route path="kylie-looks" element={<Looks />} />
+          <Route path="shade-finger-quiz" element={<Shade />} />
+          <Route path="gift-guide" element={<GiftGuide />} />
+          <Route path="gift-card" element={<GuideCard />} />
         </Route>
         <Route path="/auth" element={<AuthLayout />}>
           <Route path="login" element={<Login />} />
