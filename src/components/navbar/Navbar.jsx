@@ -5,7 +5,7 @@ import Cta from "./Cta";
 import MobileMenu from "./MobileMenu";
 import ModalFragrance from "../modal/ModalFragrance";
 import ModalSkin from "../modal/ModalSkin";
-
+import ModalDiscover from "../modal/ModalDiscover";
 const Navbar = memo(function Navbar({ isScrolled }) {
   const [activeMenu, setActiveMenu] = useState(null);
   const timeOut = useRef(null);
@@ -31,7 +31,7 @@ const Navbar = memo(function Navbar({ isScrolled }) {
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 px-4 sm:px-6 md:px-10 lg:px-12 py-4 md:py-6 backdrop-blur-lg transition-all duration-300
-      ${isScrolled ? "bg-white/80 shadow-md" : "bg-transparent"}`}
+      ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}
     >
       {/* NAVBAR */}
       <div
@@ -69,6 +69,15 @@ const Navbar = memo(function Navbar({ isScrolled }) {
         >
           <ModalSkin closeMenu={() => setActiveMenu(null)} />
         </div>
+      )}
+      {activeMenu === "discover" && (
+        <div 
+          className="absolute left-0 top-full w-full"
+          onMouseEnter={keepOpen}
+          onMouseLeave={closeMenu}
+          >
+          <ModalDiscover closeMenu={() => setActiveMenu(null)} />
+          </div>
       )}
     </div>
   );

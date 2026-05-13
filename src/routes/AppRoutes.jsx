@@ -17,6 +17,7 @@ const Card = lazy(() => import("../pages/Card.jsx"));
 const Order = lazy(() => import("../pages/Order.jsx"));
 const Shop = lazy(() => import("../pages/Shop.jsx"));
 
+// Fragrance pages
 const All = lazy(() => import("../pages/fragrance/All.jsx"));
 const Cosemic = lazy(() => import("../pages/fragrance/Cosmic.jsx"));
 const Intense = lazy(() => import("../pages/fragrance/Intense.jsx"));
@@ -24,6 +25,7 @@ const Kylie = lazy(() => import("../pages/fragrance/Kyliecosmic.jsx"));
 const Hair = lazy(() => import("../pages/fragrance/Hair.jsx"));
 const Bundles = lazy(() => import("../pages/fragrance/Bundles.jsx"));
 
+// Skin pages
 const New = lazy(() => import("../pages/skin/new/New.jsx"));
 const LipButter = lazy(() => import("../pages/skin/new/LipButter.jsx"));
 const Pomegranate = lazy(() => import("../pages/skin/new/Pomegranate.jsx"));
@@ -35,12 +37,19 @@ const Oils = lazy(() => import("../pages/skin/lips/Oils.jsx"));
 
 const Face = lazy(() => import("../pages/skin/face/Face.jsx"));
 const Cleansers = lazy(() => import("../pages/skin/face/Cleansers.jsx"));
-const Moistures = lazy(() => import("../pages/skin/face/Moistures.jsx"));
 const Toners = lazy(() => import("../pages/skin/face/Toners.jsx"));
 const Serums = lazy(() => import("../pages/skin/face/Serums.jsx"));
+const Moistures = lazy(() => import("../pages/skin/face/Moistures.jsx"));
 
 const Sellers = lazy(() => import("../pages/skin/Sellers.jsx"));
 const Sets = lazy(() => import("../pages/skin/Sets.jsx"));
+
+// Discover pages
+const About = lazy(() => import("../pages/discover/About.jsx"));
+const GiftGuide = lazy(() => import("../pages/discover/GiftGuide.jsx"));
+const GuideCard = lazy(() => import("../pages/discover/GuideCard.jsx"));
+const Shade = lazy(() => import("../pages/discover/Shade.jsx"));
+const Looks = lazy(() => import("../pages/discover/Looks.jsx"));
 
 export default function AppRoutes() {
   return (
@@ -92,6 +101,13 @@ export default function AppRoutes() {
 
           <Route path="best-sellers" element={<Sellers />} />
           <Route path="bundles-sets" element={<Sets />} />
+
+          {/* Discover */}
+          <Route path="about-us" element={<About />} />
+          <Route path="kylie-looks" element={<Looks />} />
+          <Route path="shade-finger-quiz" element={<Shade />} />
+          <Route path="gift-guide" element={<GiftGuide />} />
+          <Route path="gift-card" element={<GuideCard />} />
         </Route>
 
         <Route path="/auth" element={<AuthLayout />}>
