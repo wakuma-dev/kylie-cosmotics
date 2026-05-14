@@ -5,6 +5,7 @@ export const RouteContext = createContext(null);
 const initialState = {
   history: ["/"],
   index: 0,
+  current: "/",
 };
 
 function reducer(state, action) {
@@ -18,15 +19,18 @@ function reducer(state, action) {
       return {
         history: newHistory,
         index: newHistory.length - 1,
+        current: action.payload,
       };
     }
 
     case "GOBACK": {
       if (state.index === 0) return state;
 
+      const newIndex = state.index - 1;
       return {
         ...state,
-        index: state.index - 1,
+        index: newIndex,
+        current: state.history[newIndex],
       };
     }
 

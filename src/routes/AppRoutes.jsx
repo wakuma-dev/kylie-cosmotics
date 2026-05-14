@@ -89,7 +89,7 @@ export default function AppRoutes() {
           <Route path="reward" element={<Reward />} />
           <Route path="contact" element={<Contact />} />
           <Route path="card" element={<Card />} />
-          <Route path="shop" element={<Shop />} />
+          <Route path="/shop" element={<Shop />} />
           <Route path="cosmic-kylie-jenner" element={<Cosemic />} />
           <Route path="cosmic-kylie-jenner-2-0" element={<Kylie />} />
           <Route path="cosmic-kylie-jenner-intense" element={<Intense />} />

@@ -4,7 +4,7 @@ import { HiBars3 } from "react-icons/hi2";
 import { IoCloseOutline } from "react-icons/io5";
 
 import navItems from "../../data/navItems";
-
+import ModalSkin from "../modal/mobile/ModalSkin";
 import ModalCosmetics from "../modal/mobile/ModalCosmetics";
 import ModalFragrance from "../modal/mobile/ModalFragrance";
 import { NavLink } from "react-router-dom";
@@ -64,9 +64,7 @@ export default function MobileMenu() {
               <ModalSkin closeMenu={() => setOpen(false)} />
             )}
 
-            {active === "discover" && (
-              <ModalDiscover closeMenu={() => setOpen(false)} />
-            )}
+         
           </motion.div>
         )}
       </AnimatePresence>
