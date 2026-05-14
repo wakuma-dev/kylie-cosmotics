@@ -116,7 +116,7 @@ export default function AppRoutes() {
           <Route path="card" element={<Card />} />
 
           {/* FIXED HERE */}
-          <Route path="shop" element={<Shop />} />
+          <Route path="/shop" element={<Shop />} />
 
           {/* Fragrance */}
           <Route path="shop-all" element={<All />} />
