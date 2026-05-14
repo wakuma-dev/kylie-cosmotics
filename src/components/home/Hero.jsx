@@ -35,7 +35,7 @@ export default function Hero() {
     <section
       ref={sectionRef}
       style={bgStyle}
-      className={`min-h-[50vh] md:min-h-[80vh] flex flex-col items-start justify-center gap-2 px-4 sm:px-6
+      className={`min-h-[50dvh] md:min-h-[80dvh] flex flex-col items-start justify-center gap-2 px-4 sm:px-6
        md:px-10 lg:px-12 ${isVisible ? "opacity-100" : "opacity-0"}`}
     >
       <h2 className="text-[16px] leading-[21px] text-white font-sans font-medium uppercase tracking-tighter">
