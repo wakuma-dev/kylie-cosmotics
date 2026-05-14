@@ -10,7 +10,7 @@ export default function ModalCosmetics({ closeMenu }) {
   const toggleMenu = useCallback((index) => {
     setOpenModal((prev) => (prev === index ? null : index));
   }, []);
-
+  
   const handleNavigate = useCallback(() => {
     setOpenModal(null);
     closeMenu();
