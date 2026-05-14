@@ -10,7 +10,7 @@ const NavMenu = memo(function NavMenu({ openMenu }) {
           <li key={item.path}>
             <NavLink
               to={item.path}
-              className="p-2.5 rounded-md bg-transparent hover:bg-[#f8f1f4] text-[#4b4a5a] transition-all duration-150"
+              className="font-bold text-[16px] leading-[11px] font-sans p-2.5 rounded-md bg-transparent hover:bg-[#f8f1f4] text-[#4b4a5a] transition-all duration-150"
               onMouseEnter={() => {
                 if (item.name.toLowerCase() === "fragrance") {
                   openMenu("fragrance");
