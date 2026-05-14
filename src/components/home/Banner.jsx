@@ -1,26 +1,68 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import img from '../../assets/6d8f5a6a07b8cd2ff1f2de247162719c.jpg'
-import { Button } from '../ui/Button';
-const bgStyle = {
-  backgroundImage: `linear-gradient(to right,
-         rgba(0,0,0, 0.6),
-         rgba(0,0,0, 0.6)),url(${img})`,
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
-};
-export default function Banner(){
-    const navigate = useNavigate();
-    return(
-        <section className=" w-full min-h-[60vh] lg:min-h-[80vh] flex flex-col items-center justify-center text-center gap-3 px-4 sm:px-6 md:px-10
-         lg:px-12 py-4 md:py-6 lg:py-8"
-         style={bgStyle}>
-       <h4 className='text-[34px] leading-[37px] font-bold text-[#fff] font-sans uppercase'>virtual <br /> try on</h4>
-       <p className="text-[16px] leading-[19px] font-normal font-sans text-white">try on lipstick, blushes & more to <br /> discover  your new fave shade</p>
-       <Button variant="secondary" onClick={() => navigate("/discover")}>
-        Discover More
-       </Button>
-        </section>
-    )
+import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
+import ModalBanner from "./ModalBanner";
+import img from "../../assets/6d8f5a6a07b8cd2ff1f2de247162719c.jpg";
+import { Button } from "../ui/Button";
+
+export default function Banner() {
+  const [showModal, setShowModal] = useState(false);
+
+  // Prevent scrolling when modal is open
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [showModal]);
+
+  const bgStyle = {
+    backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url(${img})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  };
+
+  return (
+    <section
+      className="relative w-full h-[70vh] md:h-[85vh] flex flex-col items-center justify-center text-center px-6"
+      style={bgStyle}
+    >
+      <div className="max-w-2xl space-y-2">
+        <h4 className="text-[34px] leading-[37px] font-bold text-[#b3848f] uppercase">
+          virtual <br /> try on
+        </h4>
+
+        <p className="text-lg md:text-xl font-light text-gray-100 max-w-md mx-auto">
+          Try on lipsticks, blushes & more to discover your new favorite shade.
+        </p>
+
+        <Button variant="secondary"
+          onClick={() => setShowModal(true)}
+          
+        >
+          Discover More
+        </Button>
+      </div>
+
+      {showModal &&
+        createPortal(
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+            {/* Backdrop with blur */}
+            <div
+              className="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity"
+              onClick={() => setShowModal(false)}
+            />
+
+            {/* Modal Content */}
+            <div className="relative z-10 w-full flex justify-center">
+              <ModalBanner onClose={() => setShowModal(false)} />
+            </div>
+          </div>,
+          document.body,
+        )}
+    </section>
+  );
 }

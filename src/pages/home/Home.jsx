@@ -3,6 +3,7 @@ import Hero from '../../components/home/Hero';
 import { Helmet } from 'react-helmet-async'
 import FeatureProducts from '../../components/home/FeatureProducts';
 import Banner from '../../components/home/Banner';
+import CategorySections from '../../components/home/CategorySections';
 const Home = () => {
   return (
     <main>
@@ -15,7 +16,10 @@ const Home = () => {
       </Helmet>
       <Hero />
       <FeatureProducts />
+      <CategorySections />
       <Banner />
+
+
     </main>
   );
 }
