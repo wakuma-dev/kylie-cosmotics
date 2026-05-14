@@ -40,7 +40,7 @@ const Navbar = memo(function Navbar({ isScrolled }) {
         onMouseEnter={() => clearTimeout(timeOut.current)}
         onMouseLeave={closeMenu}
       >
-        <MobileMenu />
+        <MobileMenu activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
 
         {/* PASS openMenu */}
         <NavMenu openMenu={openMenu} />
@@ -60,14 +60,15 @@ const Navbar = memo(function Navbar({ isScrolled }) {
           <ModalFragrance closeMenu={() => setActiveMenu(null)} />
         </div>
       )}
-      {/* COSEMTICS MODAL */} 
+      {/* COSEMTICS MODAL */}
       {activeMenu === "cosmetics" && (
-        <div className="absolute left-0 top-full w-full"
-             onMouseEnter={keepOpen}
-             onMouseLeave={closeMenu}
-             >
-             <ModalCosemetics closeMenu={() => setActiveMenu(null)} />
-             </div>
+        <div
+          className="absolute left-0 top-full w-full"
+          onMouseEnter={keepOpen}
+          onMouseLeave={closeMenu}
+        >
+          <ModalCosemetics closeMenu={() => setActiveMenu(null)} />
+        </div>
       )}
       {/* SKIN MODAL */}
       {activeMenu === "skin" && (
@@ -80,13 +81,13 @@ const Navbar = memo(function Navbar({ isScrolled }) {
         </div>
       )}
       {activeMenu === "discover" && (
-        <div 
+        <div
           className="absolute left-0 top-full w-full"
           onMouseEnter={keepOpen}
           onMouseLeave={closeMenu}
-          >
+        >
           <ModalDiscover closeMenu={() => setActiveMenu(null)} />
-          </div>
+        </div>
       )}
     </div>
   );
