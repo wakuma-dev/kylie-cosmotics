@@ -1,15 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import SkinList from "../../data/SkinList";
-import img from "../../assets/e9cc1d1c473ee2271aa34da7334998c3.jpg";
+import CosemticsLinks from "../../data/CosemticsLinks";
+import img from "../../assets/83d7340339e0227772e518ef43bccb00.jpg";
 
-export default function ModalSkin({ closeMenu }) {
+export default function ModalCosemetics({ closeMenu }) {
   return (
     <div className="fixed top-18 left-0 w-screen min-h-[60dvh] bg-white z-50 shadow-lg">
       <div className="flex flex-wrap justify-between gap-3 md:px-10 lg:px-12 py-6">
-        {SkinList.map((item) => {
+        {CosemticsLinks.map((item) => {
           return (
-            <div key={item.path} className="flex flex-col items-start gap-3">
+            <div key={item.path} className="flex flex-col items-start gap-2">
               <img
                 src={item.image}
                 alt={item.name}
@@ -42,7 +42,7 @@ export default function ModalSkin({ closeMenu }) {
           );
         })}
 
-        <div className="ml-20 w-[500px] h-[500px]">
+        <div className="ml-20 w-[300px] h-[300px]">
           <img
             src={img}
             alt="image"

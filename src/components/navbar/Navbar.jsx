@@ -6,6 +6,7 @@ import MobileMenu from "./MobileMenu";
 import ModalFragrance from "../modal/ModalFragrance";
 import ModalSkin from "../modal/ModalSkin";
 import ModalDiscover from "../modal/ModalDiscover";
+import ModalCosemetics from "../modal/ModalCosemetics";
 const Navbar = memo(function Navbar({ isScrolled }) {
   const [activeMenu, setActiveMenu] = useState(null);
   const timeOut = useRef(null);
@@ -59,7 +60,15 @@ const Navbar = memo(function Navbar({ isScrolled }) {
           <ModalFragrance closeMenu={() => setActiveMenu(null)} />
         </div>
       )}
-
+      {/* COSEMTICS MODAL */} 
+      {activeMenu === "cosmetics" && (
+        <div className="absolute left-0 top-full w-full"
+             onMouseEnter={keepOpen}
+             onMouseLeave={closeMenu}
+             >
+             <ModalCosemetics closeMenu={() => setActiveMenu(null)} />
+             </div>
+      )}
       {/* SKIN MODAL */}
       {activeMenu === "skin" && (
         <div
