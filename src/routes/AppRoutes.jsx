@@ -41,6 +41,33 @@ const GiftGuide = lazy(() => import("../pages/discover/GiftGuide.jsx"));
 const GuideCard = lazy(() => import("../pages/discover/GuideCard.jsx"));
 const Shade = lazy(() => import("../pages/discover/Shade.jsx"));
 const Looks = lazy(() => import("../pages/discover/Looks.jsx"));
+const Brows = lazy(() => import("../pages/cosmetics/brows/Brows.jsx"));
+const EyeLiners = lazy(() => import("../pages/cosmetics/brows/EyeLiners.jsx"));
+const EyesBrows = lazy(() => import("../pages/cosmetics/brows/EyesBrows.jsx"));
+const Mascaras = lazy(() => import("../pages/cosmetics/brows/Mascaras.jsx"));
+const Palettes = lazy(() => import("../pages/cosmetics/brows/Palettes.jsx"));
+const Duos = lazy(() => import("../pages/cosmetics/featured/Duos.jsx"));
+const Favorites = lazy(() => import("../pages/cosmetics/featured/Favorites.jsx"));
+const Featured = lazy(() => import("../pages/cosmetics/featured/Featured.jsx"));
+const Makeup = lazy(() => import("../pages/cosmetics/featured/Makeup.jsx"));
+const Online = lazy(() => import("../pages/cosmetics/featured/Online.jsx"));
+const Travel  = lazy(() => import("../pages/cosmetics/featured/Travel.jsx"));
+const BundlesSets = lazy(() => import("../pages/cosmetics/featured/BundlesSets.jsx"));
+const Collections = lazy(() => import("../pages/cosmetics/featured/Collections.jsx"));
+const Lip = lazy(() => import("../pages/cosmetics/lip/Lip.jsx"));
+const LipKits = lazy(() => import("../pages/cosmetics/lip/LipKits.jsx"));
+const Lipstick = lazy(() => import("../pages/cosmetics/lip/Lipsticks.jsx"));
+const LiquidLipstick = lazy(() => import("../pages/cosmetics/lip/LiquidLipstick.jsx"));
+const Plumpers = lazy(() => import("../pages/cosmetics/lip/Plumpers.jsx"));
+const Stains = lazy(() => import("../pages/cosmetics/lip/Stains.jsx"));
+const Tints = lazy(() => import("../pages/cosmetics/lip/Tints.jsx"));
+const BestSellers = lazy(() => import("../pages/cosmetics/BestSellers.jsx"));
+const Cool = lazy(() => import("../pages/cosmetics/new/Cool.jsx"));
+const CloudBalm = lazy(() => import("../pages/cosmetics/new/CloudBalm.jsx"));
+const ButterCake = lazy(() => import("../pages/cosmetics/new/ButterCake.jsx"));
+const NewArrival = lazy(() => import("../pages/cosmetics/new/NewArrival.jsx"));
+const TravelSized = lazy(() => import("../pages/cosmetics/new/TravelSized.jsx"));
+
 export default function AppRoutes() {
   return (
     <Suspense
@@ -88,6 +115,36 @@ export default function AppRoutes() {
           <Route path="shade-finger-quiz" element={<Shade />} />
           <Route path="gift-guide" element={<GiftGuide />} />
           <Route path="gift-card" element={<GuideCard />} />
+          <Route path="cloud-balm" element={<CloudBalm />} />
+<Route path="travel-sized-hair-body-mists" element={<TravelSized />} />
+<Route path="cool-toned-precision-pout-lip-liners" element={<Cool />} />
+<Route path="butter-cake-lip-butter" element={<ButterCake />} />
+<Route path="new-arrival" element={<NewArrival />} />
+
+<Route path="best-sellers" element={<BestSellers />} />
+
+<Route path="lip" element={<Lip />} />
+<Route path="lip-kits" element={<LipKits />} />
+<Route path="lipsticks" element={<Lipstick />} />
+<Route path="liquid-lipsticks" element={<LiquidLipstick />} />
+<Route path="lip-plumpers" element={<Plumpers />} />
+<Route path="lip-stains" element={<Stains />} />
+<Route path="lip-tints" element={<Tints />} />
+
+<Route path="eyes-and-brows" element={<EyesBrows />} />
+<Route path="mascaras" element={<Mascaras />} />
+<Route path="palettes" element={<Palettes />} />
+<Route path="eyeliners" element={<EyeLiners />} />
+<Route path="brows" element={<Brows />} />
+
+<Route path="featured" element={<Featured />} />
+<Route path="bundles-sets" element={<BundlesSets />} />
+<Route path="lip-duos" element={<Duos />} />
+<Route path="kylies-favorites" element={<Favorites />} />
+<Route path="king-kylie-collection" element={<Collections />} />
+<Route path="online-exclusives" element={<Online />} />
+<Route path="makeup-brushes" element={<Makeup />} />
+<Route path="travel-essential" element={<Travel />} />
         </Route>
         <Route path="/auth" element={<AuthLayout />}>
           <Route path="login" element={<Login />} />
@@ -97,6 +154,7 @@ export default function AppRoutes() {
     </Suspense>
   );
 }
+
 
 
 

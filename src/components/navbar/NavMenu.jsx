@@ -22,6 +22,9 @@ const NavMenu = memo(function NavMenu({ openMenu }) {
                 if (item.name.toLowerCase() === "discover") {
                   openMenu("discover")
                 }
+                if (item.name.toLowerCase() === "cosmetics"){
+                  openMenu("cosmetics")
+                }
               }}
             >
               {item.name}
