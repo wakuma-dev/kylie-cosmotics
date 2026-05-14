@@ -1,1 +1,0 @@
-import{n as e,t}from"./jsx-runtime-CnSBKPes.js";e();var n=t(),r=()=>(0,n.jsx)(`div`,{children:`Face`});export{r as default};
