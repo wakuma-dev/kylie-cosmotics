@@ -7,24 +7,23 @@ import ModalFragrance from "../modal/ModalFragrance";
 import ModalSkin from "../modal/ModalSkin";
 import ModalDiscover from "../modal/ModalDiscover";
 import ModalCosemetics from "../modal/ModalCosemetics";
+
 const Navbar = memo(function Navbar({ isScrolled }) {
   const [activeMenu, setActiveMenu] = useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Track mobile menu state
   const timeOut = useRef(null);
 
-  // OPEN MENU
   const openMenu = (menu) => {
     clearTimeout(timeOut.current);
     setActiveMenu(menu);
   };
 
-  // CLOSE MENU
   const closeMenu = () => {
     timeOut.current = setTimeout(() => {
       setActiveMenu(null);
     }, 150);
   };
 
-  // KEEP OPEN ON HOVER
   const keepOpen = () => {
     clearTimeout(timeOut.current);
   };
@@ -35,23 +34,22 @@ const Navbar = memo(function Navbar({ isScrolled }) {
       py-4 md:py-6 backdrop-blur-lg transition-all duration-300
       ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}
     >
-      {/* NAVBAR */}
       <div
         className="relative flex items-center justify-between"
         onMouseEnter={() => clearTimeout(timeOut.current)}
         onMouseLeave={closeMenu}
       >
-        <MobileMenu activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
+        {/* Pass state setter to MobileMenu */}
+        <MobileMenu setIsMenuOpen={setIsMenuOpen} />
 
-        {/* PASS openMenu */}
         <NavMenu openMenu={openMenu} />
 
         <Logo />
 
-        <Cta />
+        {/* Pass state to Cta so Search can listen to it */}
+        <Cta isMenuOpen={isMenuOpen} />
       </div>
 
-      {/* FRAGRANCE MODAL */}
       {activeMenu === "fragrance" && (
         <div
           className="absolute left-0 top-full w-full"
@@ -61,7 +59,6 @@ const Navbar = memo(function Navbar({ isScrolled }) {
           <ModalFragrance closeMenu={() => setActiveMenu(null)} />
         </div>
       )}
-      {/* COSEMTICS MODAL */}
       {activeMenu === "cosmetics" && (
         <div
           className="absolute left-0 top-full w-full"
@@ -71,7 +68,6 @@ const Navbar = memo(function Navbar({ isScrolled }) {
           <ModalCosemetics closeMenu={() => setActiveMenu(null)} />
         </div>
       )}
-      {/* SKIN MODAL */}
       {activeMenu === "skin" && (
         <div
           className="absolute left-0 top-full w-full"

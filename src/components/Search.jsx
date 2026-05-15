@@ -3,8 +3,15 @@ import { createPortal } from "react-dom";
 import { IoIosSearch } from "react-icons/io";
 import ModalSearch from "./modal/ModalSearch";
 
-export default function Search() {
+export default function Search({ isMenuOpen }) {
   const [openModal, setOpenModal] = useState(false);
+
+  // Close the search box if the mobile menu is opened
+  useEffect(() => {
+    if (isMenuOpen) {
+      setOpenModal(false);
+    }
+  }, [isMenuOpen]);
 
   useEffect(() => {
     if (openModal) {
@@ -25,16 +32,13 @@ export default function Search() {
 
       {openModal &&
         createPortal(
-          /* z-[110] puts it above navbar but BELOW mobile menu z-[150] */
-          <div className="fixed inset-0 z-[110] flex items-start justify-center">
-            {/* Backdrop */}
+          <div className="fixed top-16 left-0 w-screen z-[150] flex items-start justify-center">
             <div
               className="absolute inset-0 bg-black/40 backdrop-blur-sm"
               onClick={() => setOpenModal(false)}
             />
 
-            {/* Content Wrapper - w-full and no top padding removes the gap */}
-            <div className="relative z-10 w-full animate-in fade-in slide-in-from-top-4 duration-200">
+            <div className="relative z-10 w-full animate-in fade-in slide-in-from-top-2 duration-200">
               <ModalSearch closeMenu={() => setOpenModal(false)} />
             </div>
           </div>,

@@ -5,7 +5,7 @@ import Search from '../Search'
 
 const Cta = () => {
   return (
-    <div className="flex items-center gap-4 z-[120]">
+    <div className="flex items-center gap-4 z-[170]">
        <Search />
         <Auth />
         <Cart />

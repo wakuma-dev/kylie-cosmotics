@@ -14,7 +14,7 @@ export default function ModalSearch({ closeMenu }) {
 
   return (
     /* Removed rounded-xl and fixed classes. Added border-b. */
-    <div className="w-full bg-white p-4 shadow-md border-b border-gray-100">
+    <div className="w-full bg-white -mt-3 p-4 shadow-md border-b border-gray-100">
       <div className="flex items-center gap-3 max-w-7xl mx-auto">
         <div className="relative w-full z-40">
           <input
