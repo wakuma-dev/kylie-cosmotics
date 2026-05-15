@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import FeatureProducts from '../../components/home/FeatureProducts';
 import Banner from '../../components/home/Banner';
 import CategorySections from '../../components/home/CategorySections';
+import Product from '../../components/Product';
 const Home = () => {
   return (
     <main>
@@ -17,6 +18,7 @@ const Home = () => {
       <Hero />
       <FeatureProducts />
       <CategorySections />
+      <Product />
       <Banner />
 
 
