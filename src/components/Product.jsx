@@ -11,14 +11,14 @@ const products = [
   {
     id: "cosmic-intense", // Added unique IDs
     image: img,
-    price1: 100,
+    price1: 120,
     price2: 150,
     desc: "cosmic kylie jenner intense eau de parfum",
   },
   {
     id: "cosmic-standard",
     image: img2,
-    price1: 100,
+    price1: 140,
     price2: 150,
     desc: "cosmic kylie jenner eau de perfume",
   },
@@ -26,14 +26,14 @@ const products = [
     id: "ambery-floral",
 
     image: img3,
-    price1: 100,
+    price1: 250,
     price2: 150,
     desc: "ambery floral eau de perfume",
   },
   {
     id: "cosmic-2",
     image: img,
-    price1: 100,
+    price1: 300,
     price2: 150,
     desc: "cosmic kylie jenner 2.0 eau de perfume",
   },
