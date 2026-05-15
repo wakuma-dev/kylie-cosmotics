@@ -1,9 +1,24 @@
-import React, {} from 'react'
+import React, { useState } from "react";
+import { createPortal } from "react-dom";
+import { IoIosSearch } from "react-icons/io";
+import ModalSearch from "./modal/ModalSearch";
 
-const Search = () => {
+export default function Search() {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
-    <div>Search</div>
-  )
-}
+    <>
+      <IoIosSearch
+        size={20}
+        className="cursor-pointer"
+        onClick={() => setOpenModal(true)}
+      />
 
-export default Search
+      {openModal &&
+        createPortal(
+          <ModalSearch closeMenu={() => setOpenModal(false)} />,
+          document.body,
+        )}
+    </>
+  );
+}
