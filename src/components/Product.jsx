@@ -51,14 +51,14 @@ export default function Product() {
         {products.map((pro) => (
           <div
             key={pro.id}
-            className="group relative bg-white/10 rounded-lg w-full h-[60dvh] overflow-hidden
+            className="group relative bg-white/10 rounded-lg w-full h-[400px] overflow-hidden
              border border-gray-100 shadow-sm"
           >
             {/* Product Image */}
             <img
               src={pro.image}
               alt={pro.desc}
-              className="w-full h-[55dvh] object-cover rounded-tl-full rounded-tr-full"
+              className="w-full h-[350px] object-cover rounded-tl-full rounded-tr-full"
             />
 
             {/* Slide-up Content Panel */}

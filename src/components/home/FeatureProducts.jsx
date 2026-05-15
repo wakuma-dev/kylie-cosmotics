@@ -17,19 +17,20 @@ const FeatureProducts = () => {
 
   return (
     <section className="w-full px-4 sm:px-6 md:px-10 lg:px-12 py-12 bg-[#f8f1f4]">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4">
         <motion.div
           {...motionProps}
           className="rounded-xl overflow-hidden shadow-md"
         >
-          <img src={img} alt="product" className="w-full h-[500px] object-cover" />
+          <img src={img} alt="product" className="w-full h-[400px] lg:h-[500px] object-cover" />
         </motion.div>
 
         {/* CENTER CONTENT */}
         <motion.div
           {...motionProps}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-          className="rounded-xl bg-white text-black flex flex-col items-center justify-center gap-4 p-6 shadow-md text-center"
+          className="rounded-xl bg-white text-black h-[400px] lg:h-[500px]
+          flex flex-col items-center justify-center gap-4 p-6 shadow-md text-center"
         >
           <h3 className="text-[28px] leading-[31px] text-[#b3848f] font-bold font-sans uppercase">hydrate, tint, go</h3>{" "}
           <p className="font-light font-sans text-[17px] leading-[20px] text-[#393939] max-w-[180px]">
@@ -56,7 +57,7 @@ const FeatureProducts = () => {
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
           className="rounded-md overflow-hidden shadow-md"
         >
-          <img src={img2} alt="product" className="w-full h-[500px] object-cover" />
+          <img src={img2} alt="product" className="w-full h-[400px] lg:h-[500px] object-cover" />
         </motion.div>
       </div>
     </section>

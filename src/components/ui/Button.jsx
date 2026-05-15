@@ -6,9 +6,9 @@ export function Button({
 }) {
   const style = {
     primary:
-      "bg-[#393939] text-white border-transparent hover:border-black hover:text-black hover:bg-[#f8f1f4]",
+      "bg-[#000] text-white border-transparent hover:border-black hover:text-black hover:bg-[#fff]",
     secondary:
-      "bg-[#f8f1f4] text-black border-black hover:border-transparent hover:bg-[#393939] hover:text-white",
+      "bg-[#fff] text-black border-black hover:border-transparent hover:bg-[#000] hover:text-white",
   };
 
   return (

@@ -3,8 +3,9 @@ import Hero from '../../components/home/Hero';
 import { Helmet } from 'react-helmet-async'
 import FeatureProducts from '../../components/home/FeatureProducts';
 import Banner from '../../components/home/Banner';
-import CategorySections from '../../components/home/CategorySections';
+
 import Product from '../../components/Product';
+import FragranceSections from '../../components/home/FragranceSections';
 const Home = () => {
   return (
     <main>
@@ -17,7 +18,7 @@ const Home = () => {
       </Helmet>
       <Hero />
       <FeatureProducts />
-      <CategorySections />
+      <FragranceSections />
       <Product />
       <Banner />
 
