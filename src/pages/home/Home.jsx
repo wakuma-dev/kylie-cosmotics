@@ -6,11 +6,12 @@ import Banner from '../../components/home/Banner';
 
 import Product from '../../components/Product';
 import FragranceSections from '../../components/home/FragranceSections';
+import MakeupSections from '../../components/home/MakeupSections';
 const Home = () => {
   return (
     <main>
       <Helmet>
-        <title>Home | Kylie cosmetics</title>
+        <title>Kylie Cosmetics by Kylie Jenner | Kylie jennere Fragrance | Kylie Skin</title>
         <meta
           name="description"
           content="Kylie Cosmetics by Kylie Jenner | Kylie Jenner Fragrances ..."
@@ -20,6 +21,7 @@ const Home = () => {
       <FeatureProducts />
       <FragranceSections />
       <Product />
+      <MakeupSections />
       <Banner />
 
 
