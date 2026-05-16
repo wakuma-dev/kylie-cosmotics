@@ -7,6 +7,7 @@ import Banner from '../../components/home/Banner';
 import Product from '../../components/Product';
 import FragranceSections from '../../components/home/FragranceSections';
 import MakeupSections from '../../components/home/MakeupSections';
+import ProductCategory from '../../components/home/ProductCategory';
 const Home = () => {
   return (
     <main>
@@ -23,6 +24,7 @@ const Home = () => {
       <Product />
       <MakeupSections />
       <Banner />
+      <ProductCategory />
 
 
     </main>
