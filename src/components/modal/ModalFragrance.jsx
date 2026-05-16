@@ -5,7 +5,7 @@ import img from '../../assets/0ba85f8962f40c7a62bf2685ae015323.jpg'
 export default function ModalFragrance({ closeMenu }) {
   return (
     <div className="fixed top-18 left-0 w-screen bg-white min-h-[60dvh] z-50">
-      <div className="flex flex-wrap justify-between gap-3 py-6 md:px-10 lg:px-12">
+      <div className="flex flex-wrap gap-3 py-6 md:px-10 lg:px-12">
         {FragranceList.map((item) => (
           <div key={item.path} className="flex flex-col items-center gap-2">
             <img
@@ -23,7 +23,7 @@ export default function ModalFragrance({ closeMenu }) {
             </NavLink>
           </div>
         ))}
-        <div className="ml-14 relative w-[400px]  h-[400px]">
+        <div className="ml-12 relative w-[350px]  h-[350px]">
           <img
             src={img}
             alt="image"

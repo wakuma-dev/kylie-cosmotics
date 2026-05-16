@@ -1,8 +1,8 @@
 import React from "react";
 
-const Card = ({ text, backImage, frontImage }) => {
+const Card = ({ text, backImage, frontImage, onNavigate }) => {
   return (
-    <div className="flex h-[467px] w-[467px] [perspective:1000px]">
+    <div className="flex w-full h-[350px] lg:h-[467px] md:max-w-[350px] lg:max-w-[467px] [perspective:1000px]">
       <div className="group relative h-full w-full">
         {/* Inner Card */}
         <div
@@ -13,48 +13,61 @@ const Card = ({ text, backImage, frontImage }) => {
             group-hover:[transform:rotateY(180deg)]
           "
         >
-          {/* Front */}
+          {/* Front Side */}
           <div
+            onClick={onNavigate}
             className="
-              absolute inset-0 overflow-hidden rounded-2xl
+              absolute inset-0
+              overflow-hidden rounded-2xl
               shadow-[0_8px_14px_0_rgba(0,0,0,0.2)]
+              cursor-pointer
               [backface-visibility:hidden]
             "
           >
-            {/* Image */}
+            {/* Front Image */}
             <img
               src={frontImage}
-              alt="front-image"
+              alt={text}
               className="h-full w-full object-cover"
             />
 
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40" />
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/40" />
 
             {/* Text */}
-            <p
+            <div
               className="
                 absolute inset-0 z-10
                 flex items-center justify-center
-                text-3xl font-black text-white
+                [backface-visibility:hidden]
+                [transform:translateZ(60px)]
               "
             >
-              {text}
-            </p>
+              <p
+                className="
+                text-[20px] leading-[22px]  md:text-[24px] md:leading-[26px] lg:text-[28px] lg:leading-[31px]
+                  font-bold tracking-tight
+                  uppercase text-white
+                "
+              >
+                {text}
+              </p>
+            </div>
           </div>
 
-          {/* Back */}
+          {/* Back Side */}
           <div
             className="
-              absolute inset-0 overflow-hidden rounded-2xl
+              absolute inset-0
+              overflow-hidden rounded-2xl
               shadow-[0_8px_14px_0_rgba(0,0,0,0.2)]
-              [backface-visibility:hidden]
               [transform:rotateY(180deg)]
+              [backface-visibility:hidden]
             "
           >
             <img
               src={backImage}
-              alt="back-image"
+              alt={`${text}-back`}
               className="h-full w-full object-cover"
             />
           </div>
