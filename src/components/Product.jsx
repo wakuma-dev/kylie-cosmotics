@@ -63,7 +63,7 @@ export default function Product() {
 
             {/* Slide-up Content Panel */}
             <div className="absolute bottom-2.5 left-0 w-full bg-[#fff]
-             text-black p-3 transform translate-y-16 group-hover:translate-y-0 
+             text-black p-3 transform translate-y-16 hover:translate-y-0 
              transition-transform duration-300 ease-in-out flex flex-col justify-end ">
               <div className="flex items-center justify-between w-full mb-1">
                 <span className="text-[17px] text-[#393939] font-semibold leading-[19px] font-sans">
